@@ -20,6 +20,9 @@ public class SearchController {
      */
     @RequestMapping(value = "/search/{sdata}", method = RequestMethod.GET)
     public String search(Map<String, Object> model, @PathVariable("sdata") String sdata) {
+
+        /* В темплете search.html есть переменная key="query" и типом "java.lang.String"
+         * Мы можем к ней обратиться через метод put() */
         model.put("query", sdata);
         return "search";
     }

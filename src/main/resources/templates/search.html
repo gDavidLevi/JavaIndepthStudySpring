@@ -3,12 +3,11 @@
 <head>
     <title>Spring Boot Thymeleaf Hello World Example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css"  href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/templates.css" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
 </head>
 
 <body>
-
 <nav class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-header">
@@ -26,7 +25,7 @@
 
 <div class="container">
     <div class="starter-template">
-        <!--/*@thymesVar id="query" type="java.lang.String"*/-->
+        <!--Для вставки значения переменной в темплет используется конструкция ${query}-->
         <h1 th:text="${query}"></h1>
     </div>
 </div>

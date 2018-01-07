@@ -3,7 +3,7 @@
 <head>
     <title>Spring Boot Thymeleaf Hello World Example</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/templates.css" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
 </head>
 
@@ -27,7 +27,7 @@
     <div class="starter-template">
         <h1>Spring Boot Web Thymeleaf Example</h1>
         <h2>
-            <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+            <!--  Идентификатор кнопки "clickMeBtn" для скрипта "../../js/main.js" -->
             <span th:text="About"></span>
             <button id="clickMeBtn" th:text="Click"></button>
         </h2>

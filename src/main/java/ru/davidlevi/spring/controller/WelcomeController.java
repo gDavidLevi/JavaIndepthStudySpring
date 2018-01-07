@@ -13,12 +13,11 @@ public class WelcomeController {
      * @param model Map
      * @return String
      */
-    @RequestMapping("/")  // запрос "/"
+    @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
 
         /* В темплете welcome.html есть переменная key="message" и типом "java.lang.String"
-        * Мы можем к ней обратиться через метод put() */
-
+         * Мы можем к ней обратиться через метод put() */
         model.put("message", "David");
         return "welcome";
     }
