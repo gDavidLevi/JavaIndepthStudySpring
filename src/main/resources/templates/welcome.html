@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Spring Boot</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/customers">Customers</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="starter-template">
+        <h1>Spring Boot Web Thymeleaf Example</h1>
+        <p>
+            Thymeleaf - это движок, используемый в проектах для построения HTML-страниц.
+        </p>
+        <p>
+            Thymeleaf является хорошей заменой JSP и использует в качестве шаблонов валидные файлы XHTML и XML.
+        </p>
+        <h2>
+            <!-- Переменная id="message" и типом "java.lang.String"
+            Для вставки значения переменной в темплет используется конструкция ${message},
+            а также нам доступны методы класса String, например ${message.length()} -->
+            <span th:text="'Message: Hello, ' + ${message}  + ' ' + ${message.length()} + '!'"></span>
+        </h2>
+    </div>
+</div>
+<!-- /.container -->
+
+<script type="text/javascript" src="webjars/jquery/3.2.1/dist/jquery.js"></script>
+<script type="text/javascript" src="webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
